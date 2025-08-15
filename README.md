@@ -29,3 +29,9 @@ git merge feature1
 git add index.txt
 git commit -m "Conflito resolvido entre main e feature1"
 git push origin main
+<HTML>
+<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<BODY>
+   <H1> GIT e VERSIONAMENTO </H1>
+</BODY>
+</HTML>
