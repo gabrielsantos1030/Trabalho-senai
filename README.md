@@ -8,7 +8,7 @@ cd "atividade-versionamento"
 git init
 
 echo "<HTML>
-<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<HEAD><TITLE>ATIVIDADE DE VERSÃO</TITLE></HEAD>
 <BODY>
    <H1> TÍTULO1 </H1>
 </BODY>
@@ -28,7 +28,7 @@ git push -u origin main
 git checkout -b feature1
 
 echo "<HTML>
-<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<HEAD><TITLE>ATIVIDADE DE VERSÃO</TITLE></HEAD>
 <BODY>
    <H1> GIT </H1>
 </BODY>
@@ -42,7 +42,7 @@ git push -u origin feature1
 git checkout main
 
 echo "<HTML>
-<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<HEAD><TITLE>ATIVIDADE DE VERSÃO</TITLE></HEAD>
 <BODY>
    <H1> VERSIONAMENTO </H1>
 </BODY>
@@ -57,10 +57,10 @@ git pull origin main
 
 # 7️⃣ Merge da branch feature1 na main e resolução de conflitos
 git merge feature1
-# Conflito será detectado
+# -> Conflito será detectado
 
 echo "<HTML>
-<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<HEAD><TITLE>ATIVIDADE DE VERSÃO</TITLE></HEAD>
 <BODY>
    <H1> VERSIONAMENTO E GIT </H1>
 </BODY>
