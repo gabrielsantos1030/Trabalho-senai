@@ -1,37 +1,71 @@
-# Projeto Versionamento com Git e GitHub
+# 1️⃣ Configuração inicial do Git
+git config --global user.name "Gabriel Santos dos Reis"
+git config --global user.email "gabriel@example.com"
 
-Este projeto foi criado para cumprir a atividade de versionamento de código, demonstrando o uso das ferramentas Git e GitHub para controle de versões, manipulação de branches, merge e resolução de conflitos.
-
-## Conteúdo do projeto
-
-- index.txt: arquivo com o conteúdo final conciliado após merge das branches main e feature1.
-
-## Comandos utilizados
-
-```bash
+# 2️⃣ Criar repositório local e arquivo inicial
+mkdir "atividade-versionamento"
+cd "atividade-versionamento"
 git init
-git config --global user.name "Seu Nome"
-git config --global user.email "seuemail@exemplo.com"
-git status
-git add index.txt
-git commit -m "Arquivo inicial criado"
-git push -u origin main
-git checkout -b feature1
-git add index.txt
-git commit -m "Alteração para GIT na feature1"
-git push origin feature1
-git checkout main
-git add index.txt
-git commit -m "Alteração para VERSIONAMENTO na main"
-git push origin main
-git merge feature1
-# Resolver conflito manualmente no index.txt
-git add index.txt
-git commit -m "Conflito resolvido entre main e feature1"
-git push origin main
-<HTML>
+
+echo "<HTML>
 <HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
 <BODY>
-   <H1> GIT e VERSIONAMENTO </H1>
+   <H1> TÍTULO1 </H1>
 </BODY>
-</HTML>
+</HTML>" > index.txt
+
+git status
+git add index.txt
+git commit -m "Primeira versão do index.txt"
+
+# 3️⃣ Criar repositório remoto e conectar
+git remote add origin https://github.com/seuusuario/atividade-versionamento.git
+git remote -v
+git branch -M main
+git push -u origin main
+
+# 4️⃣ Criar branch feature1 e fazer alterações
+git checkout -b feature1
+
+echo "<HTML>
+<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<BODY>
+   <H1> GIT </H1>
+</BODY>
+</HTML>" > index.txt
+
+git add index.txt
+git commit -m "Alteração para GIT na branch feature1"
+git push -u origin feature1
+
+# 5️⃣ Alterações na branch main
+git checkout main
+
+echo "<HTML>
+<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<BODY>
+   <H1> VERSIONAMENTO </H1>
+</BODY>
+</HTML>" > index.txt
+
+git add index.txt
+git commit -m "Alteração para VERSIONAMENTO na branch main"
+git push
+
+# 6️⃣ Atualizar repositório local
+git pull origin main
+
+# 7️⃣ Merge da branch feature1 na main e resolução de conflitos
+git merge feature1
+# Conflito será detectado
+
+echo "<HTML>
+<HEAD><TITLE>ATIVIDADE DE VERSIONAMENTO</TITLE></HEAD>
+<BODY>
+   <H1> VERSIONAMENTO E GIT </H1>
+</BODY>
+</HTML>" > index.txt
+
+git add index.txt
+git commit -m "Resolução de conflito entre main e feature1"
+git push
